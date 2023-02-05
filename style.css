@@ -25,6 +25,7 @@ body{
     margin: 20px;
     background-image: url(/images/bg0.jpg);
     box-shadow: 0px 0px 4px 8px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
 }
 
 #bird{
@@ -43,8 +44,8 @@ body{
 }
 
 @keyframes barrierMov1{
-    0% { left: 800px;}
-    100% { left: 0px;}
+    0% { left: 1000px;}
+    100% { left: -100px;}
 }
 
 #barrier1{
@@ -55,7 +56,6 @@ body{
     background-size: 170px 300px;
     position: relative;
     top: 240px;
-    left: 0px;
 }
 
 #barrier2{
@@ -66,7 +66,7 @@ body{
     background-size: 170px 300px;
     position: relative;
     bottom: 360px;
-    left: 800px;
+    left: 1000px;
     animation-delay: 2s;
 }
 

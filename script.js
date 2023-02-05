@@ -8,23 +8,19 @@ function turnoff() {
     document.getElementById('barrier2').style.animationPlayState = "paused";
 }
 
-
-
 document.addEventListener('keydown',  direction);
-
-let dir;
+let posbird = 310;
 
 function direction(event){
     if (event.keyCode == 38 ) {
-        dir="up";
+        posbird -= 30;
+        posbird += "px"   
+        document.getElementById('bird').style.top = posbird;
     }
+
     else if (event.keyCode == 40 ) {
-        dir="down";
+        posbird += 30;
+        posbird += "px"   
+        document.getElementById('bird').style.top = posbird;
     }
-}
-    
-
-
-  
-
- 
+} 
