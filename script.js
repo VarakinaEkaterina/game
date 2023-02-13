@@ -36,14 +36,29 @@ function moveBird(event){
     }
 } 
 
+let score = 0;
+
 let isAlive = setInterval (function(){
     let birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
     let barrier1Left = parseInt(window.getComputedStyle(barrier1).getPropertyValue("left"));
     let barrier2Left = parseInt(window.getComputedStyle(barrier2).getPropertyValue("left"));
 
     if (barrier1Left < 50 && barrier1Left > 0 && birdTop >= 250 || barrier2Left < 50 && barrier2Left > 0 && birdTop <= 250) {
-        alert("game over")
-        
+        document.getElementById('game').style.backgroundImage = "none";
+        document.getElementById('barrier1').style.display = "none";
+        document.getElementById('barrier2').style.display = "none";
+        document.getElementById('bird').style.display = "none";
+        document.getElementById('score1').style.display = "none";
+        document.getElementById('game').innerHTML = `${'<br>'}Game over! ${'<br>'} You score: ${score}`;
+      
+        setTimeout (reload,3000)
+        function reload(){
+            location.reload()
+        }
     }
-},10)
+    else if (barrier1Left < 50 && barrier1Left > 0 && birdTop <= 250 || barrier2Left < 50 && barrier2Left > 0 && birdTop >= 250) {
+        score++;
+        document.getElementById("score1").innerHTML = score;
+    }
+},200)
 
