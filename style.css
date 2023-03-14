@@ -6,7 +6,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(82, 161, 165);
+    background-color: rgb(22, 82, 80);
     font-family: 'Comfortaa', cursive;
     overflow: hidden;
 }
@@ -30,7 +30,7 @@ body{
     width: 1000px;
     height: 600px;
     position: relative;
-    border: 3px solid rgb(46, 97, 100);
+    border: 3px solid rgba(255, 255, 255, 0.567);
     border-radius: 10px;
     margin: 20px;
     background-color: #ffffff;
@@ -50,6 +50,7 @@ body{
     position: relative;
     top: 310px;
     left: 100px;
+    bottom: top+60px
 }
 
 .barrier{
@@ -66,6 +67,7 @@ body{
 #barrier1{
     width: 170px;
     height: 300px;
+    /* background-color: #000000; */
     background-image: url(/images/barrier.png);
     transform: rotate(0deg);
     background-size: 170px 300px;
@@ -76,6 +78,7 @@ body{
 #barrier2{
     width: 170px;
     height: 300px;
+    /* background-color: #000000; */
     background-image: url(/images/barrier.png);
     transform: rotate(180deg);
     background-size: 170px 300px;
