@@ -1,11 +1,11 @@
 function turnon() {
-  setInterval(position, 5500);
+  // setInterval(position, 5500);
   document.getElementById("barrier1").style.animationPlayState = "running";
   document.getElementById("barrier2").style.animationPlayState = "running";
 }
 
 function turnoff() {
-  clearInterval(position);
+  // clearInterval(position);
   document.getElementById("barrier1").style.animationPlayState = "paused";
   document.getElementById("barrier2").style.animationPlayState = "paused";
 }
@@ -36,17 +36,17 @@ function moveBird(event) {
   }
 }
 
-function position() {
-  const barrier1 = document.querySelector("#barrier1");
-  const barrier2 = document.querySelector("#barrier2");
-  let barrier1Top = getRandomeNumber(240, 380);
-  let barrier2Bottom = getRandomeNumber(370, 525);
-  barrier1.style.top = `${barrier1Top}px`;
-  barrier2.style.bottom = `${barrier2Bottom}px`;
-}
-function getRandomeNumber(min, max) {
-  return Math.round(Math.random() * (max - min) + min);
-}
+// function position() {
+//   const barrier1 = document.querySelector("#barrier1");
+//   const barrier2 = document.querySelector("#barrier2");
+//   let barrier1Top = getRandomeNumber(240, 380);
+//   let barrier2Bottom = getRandomeNumber(370, 525);
+//   barrier1.style.top = `${barrier1Top}px`;
+//   barrier2.style.bottom = `${barrier2Bottom}px`;
+// }
+// function getRandomeNumber(min, max) {
+//   return Math.round(Math.random() * (max - min) + min);
+// }
 
 let score = 0;
 let isAlive = setInterval(function () {
